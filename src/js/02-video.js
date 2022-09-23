@@ -11,7 +11,7 @@ player.on(
   'timeupdate',
   throttle(function (data) {
     const time = ({ seconds } = data);
-    console.log(seconds);
+
     localStorage.setItem(LOCAL_STORAGE_KEY, seconds);
   }, 1000)
 );
