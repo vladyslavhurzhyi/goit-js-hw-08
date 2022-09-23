@@ -10,7 +10,7 @@ const LOCAL_STORAGE_KEY = 'playVideoTime';
 player.on(
   'timeupdate',
   throttle(function (data) {
-    const time = ({ seconds } = data);
+    ({ seconds } = data);
 
     localStorage.setItem(LOCAL_STORAGE_KEY, seconds);
   }, 1000)
